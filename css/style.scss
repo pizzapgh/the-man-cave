@@ -45,6 +45,7 @@ h3, p, li{
 }
 
 // resets
+
 .container{
   max-width: 960px;
   margin: 0 auto;
@@ -76,7 +77,7 @@ header{
   height: 200px;
 @include breakpoint(break-1){
   background: url("../assets/bg-pic.png") no-repeat;
-  height: 600px;
+  height: 515px;
   }
 }
 header h1{
@@ -112,9 +113,71 @@ header .desktop{
   }
 }
 
-
-
-
-
-
 // header
+
+.col-group > div {
+  padding: 1em;
+  height: 500px;
+}
+  .left-col{
+    background: blue;
+    background: url("../assets/small-man.png") no-repeat;
+  }
+  h2{
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  @include breakpoint(break-1){
+    .col-group {
+      overflow: hidden;
+    }
+    .col-group > div {
+      float: left;
+      width: 50%;
+      height: 1000px;
+      padding: 7rem;
+    }
+    .left-col{
+      background: blue;
+      background: url("../assets/man.jpg") no-repeat;
+      height: 600px;
+    }
+    h2 {
+font-size: 4.8rem;
+    }
+  }
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    color: $darkblue
+}
+td{
+    font-style: italic;
+    font-size: 1rem;
+    padding: 0.8rem;
+    @include breakpoint(break-1){
+      font-size: 1.3rem;
+    }
+}
+td span{
+  font-size: 1.5rem;
+  @include breakpoint(break-1){
+      font-size: 1.7rem;
+  }
+}
+.services {
+    width: 280px;
+  margin: 0 auto;
+  @include breakpoint(break-1){
+    width: 380px;
+  }
+}
+sup{
+  font-size: 1.3rem;
+}
+
+
+// right-col
