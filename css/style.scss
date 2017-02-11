@@ -45,8 +45,76 @@ h3, p, li{
 }
 
 // resets
-
-
-header h1{
-  font-size: 2rem;
+.container{
+  max-width: 960px;
+  margin: 0 auto;
 }
+
+
+// global
+
+header .container{
+  max-width: 960px;
+  height: 200px;
+@include breakpoint(break-1){
+    height: 500px;
+  }
+}
+header .container:before{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.hero{
+  display: inline-block;
+  vertical-align: middle;
+}
+header{
+  text-align: center;
+  background: url("../assets/small-bg-pic.png") no-repeat;
+  height: 200px;
+@include breakpoint(break-1){
+  background: url("../assets/bg-pic.png") no-repeat;
+  height: 600px;
+  }
+}
+header h1{
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+  @include breakpoint(break-1){
+    font-size: 5.5rem;
+  }
+}
+
+header h3{
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  @include breakpoint(break-1){
+    font-size: 2.5rem;
+    margin-bottom: 1.5;
+  }
+}
+header .mobile,
+header .desktop{
+  margin: 0 auto;
+}
+.mobile{
+  display: block;
+  @include breakpoint(break-1){
+    display: none;
+  }
+}
+.desktop{
+  display: none;
+  @include breakpoint(break-1){
+    display: block;
+  }
+}
+
+
+
+
+
+
+// header
