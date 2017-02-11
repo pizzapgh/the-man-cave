@@ -9,6 +9,9 @@
 
 
 @import 'settings';
+@import 'mixin';
+@import 'normalize';
+@import 'reset';
 
 /*
  * css styles go here
@@ -48,7 +51,3 @@ a:hover {
 #nav {
   padding: 6px;
 }
-
-
-
-
