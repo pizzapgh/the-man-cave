@@ -29,25 +29,24 @@ a, a:visited {
 a:hover {
   text-decoration: underline;
 }
-
-
-
-
-#header {
-  padding: 4px;
+html{
+  font-family: $body;
+  color: $lightblue;
+}
+h1, h2, h4{
+  font-family: $header;
+  color: $lightblue;
+}
+h3{
+  color: $darkred;
+}
+h3, p, li{
+  font-style: italic;
 }
 
-#header .big {
-  font-size:   140%;
-  font-weight: bold;
-}
+// resets
 
-#header .small {
-  font-size:    90%;
-  color:        grey;
-  padding-left: 15px;
-}
 
-#nav {
-  padding: 6px;
+header h1{
+  font-size: 2rem;
 }
