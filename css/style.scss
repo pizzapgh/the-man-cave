@@ -13,171 +13,18 @@
 @import 'normalize';
 @import 'reset';
 
-/*
- * css styles go here
- */
 
-body {
-
+.border-div{
+  border: 40px solid transparent;
+   padding: 10rem 7rem;
+   -webkit-border-image: url("../assets/border.png") 30 round; /* Safari 3.1-5 */
+   -o-border-image: url("../assets/border.png") 30 round; /* Opera 11-12.1 */
+   border-image: url("../assets/border.png") 30 round;
 }
-
-a, a:visited {
-  color: $link-color;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-html{
-  font-family: $body;
-  color: $lightblue;
-}
-h1, h2, h4{
-  font-family: $header;
-  color: $lightblue;
-}
-h3{
-  color: $darkred;
-}
-h3, p, li{
-  font-style: italic;
-}
-
-// resets
-
 .container{
-  max-width: 960px;
+  width: 960px;
   margin: 0 auto;
 }
-
-
-// global
-
-header .container{
-  max-width: 960px;
-  height: 200px;
-@include breakpoint(break-1){
-    height: 500px;
-  }
+.pic{
+  width: 100%;
 }
-header .container:before{
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-.hero{
-  display: inline-block;
-  vertical-align: middle;
-}
-header{
-  text-align: center;
-  background: url("../assets/small-bg-pic.png") no-repeat;
-  height: 200px;
-@include breakpoint(break-1){
-  background: url("../assets/bg-pic.png") no-repeat;
-  height: 515px;
-  }
-}
-header h1{
-  font-size: 2.5rem;
-  margin-bottom: 0.2rem;
-  @include breakpoint(break-1){
-    font-size: 5.5rem;
-  }
-}
-
-header h3{
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  @include breakpoint(break-1){
-    font-size: 2.5rem;
-    margin-bottom: 1.5;
-  }
-}
-header .mobile,
-header .desktop{
-  margin: 0 auto;
-}
-.mobile{
-  display: block;
-  @include breakpoint(break-1){
-    display: none;
-  }
-}
-.desktop{
-  display: none;
-  @include breakpoint(break-1){
-    display: block;
-  }
-}
-
-// header
-
-.col-group > div {
-  padding: 1em;
-  height: 500px;
-}
-  .left-col{
-    background: blue;
-    background: url("../assets/small-man.png") no-repeat;
-  }
-  h2{
-    text-align: center;
-    font-size: 4rem;
-    text-transform: uppercase;
-  }
-  @include breakpoint(break-1){
-    .col-group {
-      overflow: hidden;
-    }
-    .col-group > div {
-      float: left;
-      width: 50%;
-      height: 1000px;
-      padding: 7rem;
-    }
-    .left-col{
-      background: blue;
-      background: url("../assets/man.jpg") no-repeat;
-      height: 600px;
-    }
-    h2 {
-font-size: 4.8rem;
-    }
-  }
-
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-    color: $darkblue
-}
-td{
-    font-style: italic;
-    font-size: 1rem;
-    padding: 0.8rem;
-    @include breakpoint(break-1){
-      font-size: 1.3rem;
-    }
-}
-td span{
-  font-size: 1.5rem;
-  @include breakpoint(break-1){
-      font-size: 1.7rem;
-  }
-}
-.services {
-    width: 280px;
-  margin: 0 auto;
-  @include breakpoint(break-1){
-    width: 380px;
-  }
-}
-sup{
-  font-size: 1.3rem;
-}
-
-
-// right-col
