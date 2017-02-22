@@ -13,22 +13,83 @@
 @import 'normalize';
 @import 'reset';
 
-
-.border-div{
-  border: 40px solid transparent;
-   padding: 2rem 2rem;
-   -webkit-border-image: url("../assets/border.png") 30 round; /* Safari 3.1-5 */
-   -o-border-image: url("../assets/border.png") 30 round; /* Opera 11-12.1 */
-   border-image: url("../assets/border.png") 30 round;
+svg{
+   font-variant: small-caps;
 }
 .container{
-  width: 960px;
-  margin: 0 auto;
-}
-.pic{
   width: 100%;
-    padding: 8rem;
+  margin: 0 auto;
+  text-align: center;
+  @include breakpoint(break-1){
+    width: 960px;
+  }
 }
-.red-border{
-  border:1px solid #973136;
+
+// global
+
+.mobile{
+  display: block;
+margin: 0 auto;
+width: 50px;
+@include breakpoint(break-1){
+    display: none;
+  }
+}
+.desktop{
+  display: none;
+  margin: 0 auto;
+@include breakpoint(break-1){
+    display: block;
+    width: 100px;
+  }
+}
+
+// mobile/desktop
+
+
+
+header h3{
+  font-family: $header;
+  color: $red;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  @include breakpoint(break-1){
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+// styles
+
+.lines span{
+  display: inline-block;
+  position: relative;
+}
+.lines span:before,
+.lines span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  /* border-bottom: 1px solid red; */
+  border-top: 1px solid $red;
+  top: -41px;
+  width: 78px;
+  @include breakpoint(break-1){
+    top: 55px;
+    width: 260px;
+  }
+}
+.lines span:before {
+  right: 100%;
+  margin-right: 32px;
+  @include breakpoint(break-1){
+    margin-right: 15px;
+  }
+}
+.lines span:after {
+  left: 100%;
+  margin-left: 32px;
+  @include breakpoint(break-1){
+    margin-left: 15px;
+  }
 }
