@@ -27,7 +27,7 @@ svg{
 
 // global
 
-.mobile{
+.mobile {
   display: block;
 margin: 0 auto;
 width: 50px;
@@ -35,18 +35,21 @@ width: 50px;
     display: none;
   }
 }
-.desktop{
+.desktop {
   display: none;
   margin: 0 auto;
 @include breakpoint(break-1){
     display: block;
     width: 100px;
+    margin: 0 auto;
   }
 }
 
 // mobile/desktop
 
-
+header{
+  margin-bottom: 1rem;
+}
 
 header h3{
   font-family: $header;
@@ -91,5 +94,52 @@ header h3{
   margin-left: 32px;
   @include breakpoint(break-1){
     margin-left: 15px;
+  }
+}
+
+tbody {
+     display: table-row-group;
+     vertical-align: middle;
+     border-color: inherit;
+     color: $tintblue;
+ }
+ td{
+     font-style: italic;
+     font-size: 1rem;
+     padding: 1rem 0;
+     @include breakpoint(break-1){
+       font-size: 1.3rem;
+       padding: 1.7rem 0;
+     }
+ }
+ td span{
+   font-size: 1.2rem;
+   font-family: $body;
+   font-weight: 200;
+   @include breakpoint(break-1){
+       font-size: 2.5rem;
+   }
+ }
+ .services {
+     width: 285px;
+   margin: 0 auto;
+   @include breakpoint(break-1){
+     width: 580px;
+     margin: 0 auto;
+   }
+ }
+
+
+ sup{
+   font-size: 1rem;
+   @include breakpoint(break-1){
+     font-size: 1.5rem;
+   }
+ }
+strong{
+  font-size: 1.3rem;
+  font-family: $header;
+  @include breakpoint(break-1){
+    font-size: 2.3rem;
   }
 }
