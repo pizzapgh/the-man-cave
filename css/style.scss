@@ -13,14 +13,23 @@
 @import 'normalize';
 @import 'reset';
 
-html, body{
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html{
   height: 135%;
+  background: url("{{ site.baseurl }}/assets/bg-big.png")
 }
 body{
-     border: 15px solid transparent;
-  -webkit-border-image: url("{{ site.baseurl }}/assets/bg-big.png") 30 round; /* Safari 3.1-5 */
-    -o-border-image: url("{{ site.baseurl }}/assets/bg-big.png") 30 round; /* Opera 11-12.1 */
-    border-image: url("{{ site.baseurl }}/assets/bg-big.png") 30 round;
+  background: white;
+  height: auto;
+margin: 0.9rem;
+padding: 0 1rem;
+@include breakpoint(break-1){
+  margin: 1.5rem;
+  }
 }
 svg{
    font-variant: small-caps;
@@ -36,6 +45,7 @@ svg{
 ul{
   list-style: none;
 }
+
 // global
 
 .mobile {
@@ -151,6 +161,7 @@ tbody {
 strong{
   font-size: 1.3rem;
   font-family: $header;
+  font-style: normal;
   @include breakpoint(break-1){
     font-size: 2.3rem;
   }
