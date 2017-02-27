@@ -28,7 +28,7 @@ body{
 margin: 0.9rem;
 padding: 0 1rem;
 @include breakpoint(break-1){
-  margin: 1.5rem;
+  margin: 4.5rem;
   }
 }
 svg{
@@ -97,7 +97,7 @@ header h3{
   /* border-bottom: 1px solid red; */
   border-top: 1px solid $red;
   top: -41px;
-  width: 108px;
+  width: 90px;
   @include breakpoint(break-1){
     top: 55px;
     width: 320px;
