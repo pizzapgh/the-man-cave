@@ -19,10 +19,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html{
-  height: 135%;
+  height: 130%;
   background: url("{{ site.baseurl }}/assets/bg-big.png");
   @include breakpoint(break-1){
-    height: 130%;
+    height: 135%;
     }
 }
 body{
